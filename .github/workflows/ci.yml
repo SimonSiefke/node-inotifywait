@@ -24,7 +24,7 @@ jobs:
         if: steps.npm-cache.outputs.cache-hit != 'true'
       - run: npm run postinstall
       - run: npm test
-      # - uses: JS-DevTools/npm-publish@v1
-      #   with:
-      #     token: ${{ secrets.NPM_TOKEN }}
-      #   if: matrix.os == 'ubuntu-latest'
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+        if: matrix.os == 'ubuntu-latest'
