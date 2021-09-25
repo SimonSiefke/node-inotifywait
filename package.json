@@ -1,11 +1,14 @@
 {
   "name": "inotifywait-path",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "src/index.js",
   "type": "module",
   "files": [
     "src"
+  ],
+  "os": [
+    "linux"
   ],
   "scripts": {
     "postinstall": "node ./src/postinstall.js",
